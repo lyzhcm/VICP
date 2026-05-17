@@ -1,7 +1,10 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import os
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from dinov2_hf import load_dinov2
 
 
 
@@ -82,11 +85,11 @@ class Model(torch.nn.Module):
     def __init__(self, args):
         super().__init__()
         self.args = args
-        encoder = torch.hub.load('facebookresearch/dinov2', args.vision_model).eval()
+        encoder = load_dinov2(args.vision_model).eval()
         encoder.requires_grad_(False)
         self.encoder = encoder
 
-        encoder_copy = torch.hub.load('facebookresearch/dinov2', args.vision_model).eval()
+        encoder_copy = load_dinov2(args.vision_model).eval()
         encoder_copy.requires_grad_(False)
         self.encoder_copy = encoder_copy
 

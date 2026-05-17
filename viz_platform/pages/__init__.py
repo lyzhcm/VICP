@@ -1,1 +1,0 @@
-""" VICP Training Platform - Pages """

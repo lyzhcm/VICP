@@ -95,7 +95,9 @@ class PetFaceDataset(Dataset):
         self.categorytoindex = {c: i for i, c in enumerate(class_names)}
         self.category_labels = []
         for idx, f in enumerate(image_list):
-            n = '/'.join(f.split('/')[-3:-1])
+            f_norm = os.path.normpath(f)
+            parts = f_norm.split(os.sep)
+            n = '/'.join(parts[-3:-1])
             if n not in d:
                 d[n] = len(d)
             self.labels.append(d[n])

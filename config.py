@@ -10,7 +10,7 @@ data_config = {
             ['sports_equipment', 'portable_chair', 'sports_ball', 'bucket', 'umbrella', 'hardshell_case']
         ],
         'classes': ['tackle_box', 'portable_chair', 'bicycle', 'poster_tube', 'duffel_bag', 'sports_equipment', 'hat', 'box', 'purse', 'hardshell_case', 'suitcase', 'umbrella', 'musical_instrument', 'trash_can', 'hand_truck', 'pet_carrier', 'sports_ball', 'mobile_phone', 'portable_speaker', 'binoculars', 'headphones', 'beverage_bottle', 'tire_wheel', 'jacket', 'cooler', 'book', 'stroller', 'backpack', 'food_container', 'cart', 'bucket', 'shoes', 'bicycle_helmet', 'skateboard'],
-        'root': './groundingdino_cropped',
+        'root': '../groundingdino_cropped',
         'transform': None,
     }
 }

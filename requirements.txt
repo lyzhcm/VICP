@@ -1,2 +1,10 @@
 transformers==4.57.0
 torch==2.6.0
+datasets
+pandas
+pillow
+torchvision
+scipy
+scikit-learn
+easydict
+tqdm
